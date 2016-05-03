@@ -118,7 +118,7 @@ Fileupload.prototype.handle = function (ctx, next) {
 			remainingFile--;
 			if (remainingFile === 0) {
 				debug("Response sent: ", resultFiles);
-				return ctx.done(null, resultFiles); // TODO not clear what to do here yet
+				return ctx.done(null, {data: resultFiles, message: "", status: 200}); // TODO not clear what to do here yet
 			}
 		};
 
